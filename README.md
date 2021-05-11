@@ -9,11 +9,10 @@ To create a development environment from a yaml file:
 - `conda env create -n myenvname -f envs/python3.8env.yml`
 
 
-To create a development environment from from scratch with a new python version:
+To create a development environment from scratch with a new python version:
 - `git clone https://github.com/slaclab/pythonEnvs.git`
 - `cd pythonEnvs`
-Create an enironment with a certain python version, Ex: `python=3.9`
-- `conda create -y --name my_env_name python=3.# --file envs/conda-packages.txt`
-`conda activate my_env_name`
-`pip install -r envs/pip-packages.txt`
-`conda deactivate`
+- `conda create -y --name myenvname python=3.# --file envs/conda-packages.txt`
+- `conda activate myenvname`
+- `pip install -r envs/pip-packages.txt`
+- `conda deactivate`
