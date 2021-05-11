@@ -1,10 +1,13 @@
-name: Create and Test environment
+name: Create and Pack environment
 
 on:
- push:
-    branches: [ master ]
+  push:
+    branches:    
+      - master
+      - github-actions
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
   build-and-run:
