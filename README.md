@@ -6,4 +6,4 @@ To create a development environment from a yaml file:
 - Download and install a [miniconda environment](https://conda.io/miniconda.html)
 - `git clone https://github.com/slaclab/pythonEnvs.git`
 - `cd pythonEnvs`
-- `conda env create -n myenvname -f envs/python3.8env.yaml`
+- `conda env create -n myenvname -f envs/python3.8env.yml`
