@@ -41,7 +41,7 @@ conda deactivate
 ```
 
 ## Unpack a pre-built environment on a linux host:
-Navigate to the **Releases** section on this repo and download an environment tarball (`.tar.gz`).
+Navigate to the **Releases** section on this repo and download an environment tarball (E.g.:`R3.8.8-0.0.0.tar.gz`).
 
 Unpack the environment into directory `my_env` 
 ```
