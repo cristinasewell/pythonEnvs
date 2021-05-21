@@ -8,8 +8,14 @@ To create a development environment from a yaml file:
 - `cd pythonEnvs`
 - `conda env create -n myenvname -f envs/python3.8env.yml`
 
+- The `-n myenvname` is optional because the name is already defined in the yaml file so you can simply do:
+- `conda env create -f envs/python3.8env.yml`
+
 
 To create a development environment from scratch with a new python version:
+First add conda-forge as the highest priority channel:
+- `conda config --add channels conda-forge`
+
 - `git clone https://github.com/slaclab/pythonEnvs.git`
 - `cd pythonEnvs`
 - `conda create -y --name myenvname python=3.# --file envs/conda-packages.txt`
