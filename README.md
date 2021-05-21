@@ -10,6 +10,9 @@ To create a development environment from a yaml file:
 
 
 To create a development environment from scratch with a new python version:
+First add conda-forge as the highest priority channel:
+- `conda config --add channels conda-forge`
+
 - `git clone https://github.com/slaclab/pythonEnvs.git`
 - `cd pythonEnvs`
 - `conda create -y --name myenvname python=3.# --file envs/conda-packages.txt`
