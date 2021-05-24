@@ -1,0 +1,33 @@
+name: Create and Pack environment
+
+on:
+  push:
+    branches:    
+      - master
+      - github-actions
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build-and-run:
+    name: Create conda environment with "envs/python3.8env.yml"
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ["ubuntu-latest"]
+        python-version: ["3.8.8"]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          environment-file: envs/python3.8env.yml
+          auto-activate-base: true
+          activate-environment: true
+          python-version: ${{ matrix.python-version }}
+      - name: Conda info
+        run: |
+          conda info
+          which python
+          conda list
