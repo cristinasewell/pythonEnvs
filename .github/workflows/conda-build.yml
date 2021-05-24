@@ -1,8 +1,10 @@
 name: Test environment
 
-on:
+on:  
+  push:
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
   build-and-run:
