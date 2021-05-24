@@ -3,13 +3,14 @@ name: Test conda environment
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [ master]
   pull_request:
-    branches: [ master ]
+    branches: [ master, github-actions ]
 
 jobs:
   build-and-run:
     name: Create conda environment with "envs/python3.8env.yml"
+    if: ${{ github.repository == 'slaclab/pythonEnvs' }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
