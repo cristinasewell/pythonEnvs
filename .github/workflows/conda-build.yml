@@ -1,18 +1,12 @@
 name: Test environment
 
 on:
-  push:
-    branches:    
-      - master
-      - github-actions
   pull_request:
-    branches:
-      - master
-      - github-actions
+    branches: [ master ]
 
 jobs:
   build-and-run:
-    name: Create conda environment with "envs/python3.8env.yml"
+    if: ${{ github.repository == 'slaclab/pythonEnvs' }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
