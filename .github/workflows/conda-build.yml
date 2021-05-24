@@ -2,8 +2,7 @@ name: Test environment
 
 on:  
   push:
-    branches:
-      - master
+    types: [ opened, synchronize ]
   pull_request:
     types: [ opened, synchronize ]
 
