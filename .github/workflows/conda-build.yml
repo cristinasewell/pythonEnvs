@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-run:
-    if: ${{ github.repository == 'slaclab/pythonEnvs' }}
+    name: Try conda environment with "envs/python3.8env.yml"
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
