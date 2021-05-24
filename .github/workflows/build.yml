@@ -4,9 +4,7 @@ name: CI - test conda environmnet
 
 # Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches: [ master ]
+  # Triggers the workflow on pull request events for master
   pull_request:
     branches: [ master ]
 
