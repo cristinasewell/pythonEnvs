@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-unset PYTHONPATH
+# unset PYTHONPATH
 
 # Setup Prod on DEV Channel Access environment
 # This can be put in a if/case statement in the future?
